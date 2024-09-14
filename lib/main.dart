@@ -12,7 +12,7 @@ void main() {
   );
 }
 
-//EJEMPLO UN SOLO PROVIDER
+//varios PROVIDERS
 class ProviderExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -24,3 +24,17 @@ class ProviderExample extends StatelessWidget {
     );
   }
 }
+
+
+//EJEMPLO UN SOLO PROVIDER
+// class ProviderExample extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return ChangeNotifierProvider(
+//       create: (context) => PerritoProvider(),
+//       child: MaterialApp(
+//         home: HomePage(),
+//       ),
+//     );
+//   }
+// }
