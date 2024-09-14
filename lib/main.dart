@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:providerappg9/pages/home_page.dart';
 import 'package:providerappg9/provider/animal_provider.dart';
+import 'package:providerappg9/provider/user_provider.dart';
 
 void main() {
   runApp(
@@ -16,8 +17,11 @@ void main() {
 class ProviderExample extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => PerritoProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => PerritoProvider()),
+        ChangeNotifierProvider(create: (context) => UserProvider())
+      ],
       child: MaterialApp(
         home: HomePage(),
       ),
